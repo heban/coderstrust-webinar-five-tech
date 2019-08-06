@@ -12,3 +12,7 @@ export const IntroBox = styled.div`
   padding: 32px 20px;
   margin: 0 auto;
 `;
+
+export const Mark = styled.span`
+  color: ${colors.tertiary};
+`;

@@ -8,6 +8,8 @@ import {
   Deck,
   Heading,
   Slide,
+  Appear,
+  Text,
 } from 'spectacle';
 import preloader from "spectacle/lib/utils/preloader";
 
@@ -20,6 +22,7 @@ import Intro from './images/intro-unsplash.jpg';
 // Styles
 import {
   IntroBox,
+  Mark,
 } from './presentation.styled';
 
 preloader({
@@ -46,7 +49,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={['fade']}
+        transition={['fade', 'spin']}
         transitionDuration={500}
         theme={theme}
         contentWidth={1000}
@@ -64,6 +67,93 @@ export default class Presentation extends React.Component {
             </Heading>
             <Heading size={5} lineHeight={1} textColor="tertiary">
               wartych poznania
+            </Heading>
+          </IntroBox>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            Pogadamy dziś o...
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Takiej tam bibliotece <Mark>React.js</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Nieco dziwnym podejściu do stylowania zwanym <Mark>CSS in JS</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Języku <Mark>TypeScript</Mark>, który jest coraz głośniejszy
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Generatorze stron <Mark>GatsbyJS</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Sposobie tworzenia aplikacji mobilnych w <Mark>React Native</Mark>
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js
+          </Heading>
+          <Appear>
+            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              Biblioteka do tworzenia interfejsów w JavaScript
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            CSS in JS
+          </Heading>
+          <Appear>
+            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              Nowoczesne podejście do stylowania stron i aplikacji WWW
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            TypeScript
+          </Heading>
+          <Appear>
+            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              Język kompilowany do JavaScriptu o wielkich możliwościach
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            GatsbyJS
+          </Heading>
+          <Appear>
+            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              Generator statycznych stron dla miłośników Reacta
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React Native
+          </Heading>
+          <Appear>
+            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              Gdy technologie webowe, spotykają mobilne
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgImage={Intro} bgDarken={0.5}>
+          <IntroBox>
+            <Heading size={3} lineHeight={1} textColor="secondary">
+              Dziękuję :)
             </Heading>
           </IntroBox>
         </Slide>
