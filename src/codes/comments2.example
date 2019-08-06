@@ -1,0 +1,8 @@
+/* Author: Paweł */
+var test = 10;
+/*
+ var test2 = 15;
+ var test3 = 23;
+
+ ten kawałek kodu jest wyłączony, a ja mogę jeszcze coś tutaj napisać
+*/

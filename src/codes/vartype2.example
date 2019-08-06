@@ -1,0 +1,5 @@
+let text = 'a';                   // pojedyczny znak
+let longText = "Ala ma kota";     // string będący całym zdaniem
+let veryLongText = `Ala ma kota
+  i może ma też psa, któż to wie?
+`;                                // tekst wielolinijkowy

@@ -1,0 +1,2 @@
+let trueValue = true;      // wartość boolowska określająca prawdę
+let falseValue = false;    // wartość boolowska określająca fałsz

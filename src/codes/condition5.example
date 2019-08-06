@@ -1,0 +1,15 @@
+if (warunekA) {
+  // tajemniczy kod
+} else if (warunekB) {
+  // tajemniczy kod
+} else if (warunekC) {
+  // tajemniczy kod
+} else if (warunekD) {
+  // tajemniczy kod
+} else if (warunekE) {
+  // tajemniczy kod
+} else if (warunekF) {
+  // tajemniczy kod
+} else {
+  // Żaden z powyższych
+}

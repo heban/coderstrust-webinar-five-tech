@@ -1,0 +1,6 @@
+let age = 19;
+if (age > 18) {
+  console.log("Jesteś pełnoletni, możesz korzystać z serwisu");
+} else {
+  console.log("Niestety jesteś zbyt młody aby korzystać z serwisu");
+}

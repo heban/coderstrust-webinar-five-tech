@@ -1,0 +1,4 @@
+// To jest przykładowy komentarz
+
+var test = 10; // Ta zmienna jest bardzo ważna!
+// var test2 = 11;    <-- a ta już nie i jest zakomentowana!

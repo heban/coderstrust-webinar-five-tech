@@ -1,0 +1,2 @@
+let test = 2019;
+console.log(test);    // wyświetli w konsoli: 2019 

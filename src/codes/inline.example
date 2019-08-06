@@ -1,0 +1,7 @@
+<script>
+  function sayHello(first, second) {
+    return 'Hello!';
+  }
+
+  sayHello();
+</script>

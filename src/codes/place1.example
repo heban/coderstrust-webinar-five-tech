@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Testowa strona</title>
+    <script>
+      function sayHello(first, second) {
+        return 'Hello!';
+      }
+      sayHello();
+    </script>
+  </head>
+  <body>
+    <!-- dalsza część strony -->
+  </body>
+</html>

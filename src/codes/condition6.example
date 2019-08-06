@@ -1,0 +1,19 @@
+switch (zmienna) {
+  case warunekA:
+    // tajemniczy kod
+    break;
+  case warunekB:
+    // tajemniczy kod
+    break;
+  case warunekC:
+    // tajemniczy kod
+    break;
+  case warunekD:
+    // tajemniczy kod
+    break;
+  case warunekE:
+    // tajemniczy kod
+    break;
+  default:
+    // Gdy wszystko inne zawiedzie
+}

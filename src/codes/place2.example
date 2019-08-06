@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Testowa strona</title>
+  </head>
+  <body>
+    <div class="root">...</div>
+    <!-- dalsza część strony -->
+    <script>
+      function sayHello(first, second) {
+        return 'Hello!';
+      }
+      sayHello();
+    </script>
+  </body>
+</html>

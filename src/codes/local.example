@@ -1,0 +1,11 @@
+function test() {
+  var test = "Istnieję tylko w tej funkcji";
+  test.toLowerCamelCase();
+
+  return "Funkcja zwracająca test";
+}
+
+if (typeof window !== 'undefined') {
+  let block = "A ja istnieję tylko w tym bloku!";
+  const block2 = "I ja także";
+}

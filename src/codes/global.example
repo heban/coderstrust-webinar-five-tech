@@ -1,0 +1,9 @@
+function test() {
+  test = "Bez słówka var już nie jestem lokalna";
+  test.toLowerCamelCase();
+
+  return "Funkcja zwracająca test";
+}
+
+let block = "Nie ogranicza nas blok więc jesteśmy globalne";
+const block2 = "Dokładnie";

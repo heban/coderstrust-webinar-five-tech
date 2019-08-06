@@ -1,0 +1,9 @@
+var firstSentence = 'Ala ma ';
+var secondSentence = 'kota';
+
+function concatStrings(first, second) {
+  return first + second;
+}
+
+// Wywołanie funkcji
+concatStrings(firstSentence, secondSentence);
