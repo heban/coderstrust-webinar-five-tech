@@ -16,6 +16,10 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
+// Charts
+import ReactUsage from './components/ReactUsage';
+import ReactNativeUsage from './components/ReactNativeUsage';
+
 // Images
 import Intro from './images/intro-unsplash.jpg';
 
@@ -112,6 +116,18 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js
+          </Heading>
+          <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Poziom satysfakcji z używania*
+          </Text>
+          <ReactUsage />
+          <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://2018.stateofjs.com
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             CSS in JS
           </Heading>
           <Appear>
@@ -149,6 +165,18 @@ export default class Presentation extends React.Component {
               Gdy technologie webowe, spotykają mobilne
             </Text>
           </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React Native
+          </Heading>
+          <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Poziom satysfakcji z używania*
+          </Text>
+          <ReactNativeUsage />
+          <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://2018.stateofjs.com
+          </Text>
         </Slide>
         <Slide bgImage={Intro} bgDarken={0.5}>
           <IntroBox>
