@@ -22,10 +22,13 @@ import ReactUsage from './components/ReactUsage';
 import ReactNativeUsage from './components/ReactNativeUsage';
 import EmotionUsage from './components/EmotionUsage';
 import StyledUsage from './components/StyledUsage';
+import TypeScriptUsage from './components/TypeScriptUsage';
 
 // Images
 import Intro from './images/intro-unsplash.jpg';
 import Android from './images/android.png';
+import ReactTrends from './images/react-trends.png';
+import GatsbyTrends from './images/gatsby.png';
 
 // Styles
 import {
@@ -35,11 +38,15 @@ import {
   AndroidImage,
   CodeWithImage,
   Bridge,
+  ReactTrendsImage,
+  GatsbyTrendsImage,
 } from './presentation.styled';
 
 preloader({
   Intro,
   Android,
+  ReactTrends,
+  GatsbyTrends,
 });
 
 // Require CSS
@@ -124,6 +131,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js - trendy
+          </Heading>
+          <Appear>
+            <div>
+              <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+                W porównaniu do Angulara, popularność Reacta rośnie praktycznie nieustannie*
+              </Text>
+              <ReactTrendsImage src={ReactTrends} />
+              <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+                *źródło: https://trends.google.pl/trends/explore?date=today%205-y&q=%2Fm%2F012l1vxv,%2Fg%2F11c6w0ddw9
+              </Text>
+            </div>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             React.js
           </Heading>
           <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
@@ -176,11 +199,84 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            TypeScript
+          </Heading>
+          <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Poziom satysfakcji z używania*
+          </Text>
+          <TypeScriptUsage />
+          <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://2018.stateofjs.com
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             GatsbyJS
           </Heading>
           <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
             Generator statycznych stron dla miłośników Reacta
           </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              GatsbyJS jest frameworkiem pozwalającym tworzyć szybkie i zoptymalizowane strony WWW oraz aplikacje.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Wykorzystywany jest w tym celu React, aby ułatwić programistom pracę nad kodem.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Wynikiem budowania przyszłej strony lub aplikacji w GatsbyJS jest zbiór plików .html, .js oraz .css. Nie ma tutaj żadnego kodu wykonywanego po stronie serwera.
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            GatsbyJS
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Czy to dobry wybór?
+          </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Gatsby posiada ogromny ekosystem wtyczek za pomocą których możemy np. w łatwy sposób dodać system komentarzy, Google Analytics etc.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Posiada możliwość pobierania danych z wielu źródeł np. z plików MarkDown, a nawet bezpośrednio z WordPressa.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 64px 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Gatsby stawia bardzo duży nacisk na optymalizacje wynikowej strony. Domyślnie każda strona jest także aplikacją <Mark>PWA</Mark> co daje końcowym użytkownikom jeszcze lepsze doświadczenie.
+            </Text>
+          </Appear>
+          <Appear>
+            <ImportantBox>
+              <Text textAlign="left" textSize={28} lineHeight={1.2} textColor="tertiary">
+                Próg wejścia w tę technologię może być duży jeżeli nie jesteśmy zaznajomieni z procesem budowania stron statycznych i środowiskiem Reacta.
+              </Text>
+            </ImportantBox>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            GatsbyJS - trendy
+          </Heading>
+          <Appear>
+            <div>
+              <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+                Popularność GatsbyJS w serwisie Github rośnie bardzo szybko*
+              </Text>
+              <GatsbyTrendsImage src={GatsbyTrends} />
+              <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+                *źródło: https://star-history.t9t.io/#gatsbyjs/gatsby
+              </Text>
+            </div>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
@@ -190,22 +286,22 @@ export default class Presentation extends React.Component {
             Gdy technologie webowe, spotykają mobilne
           </Text>
           <Appear>
-            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="fifth">
+            <Text margin="64px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
               React Native umożliwia tworzenie cross-platformowych aplikacji mobilnych za pomocą Reacta.
             </Text>
           </Appear>
           <Appear>
-            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="fifth">
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
               Mottem przewodnim RN jest <Mark>"Naucz się raz, pisz wszędzie"</Mark>.
             </Text>
           </Appear>
           <Appear>
-            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="fifth">
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
               Systemami docelowymi dla React Native są Android i iOS. Istnieje jednak osobny projekt, rozwijany specjalnie dla systemu Windows.
             </Text>
           </Appear>
           <Appear>
-            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="fifth">
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
               W przeciwieństwie do np. PhoneGapa, wynikowym produktem RN jest pełnoprawna aplikacja natywna, nie webowa.
             </Text>
           </Appear>

@@ -1,4 +1,0 @@
-let age = 19;
-if (age > 18) {
-  console.log("Jesteś pełnoletni, możesz korzystać z serwisu");
-}

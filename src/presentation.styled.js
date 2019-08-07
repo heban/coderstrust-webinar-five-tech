@@ -80,3 +80,17 @@ export const Bridge = styled.div`
     }
   }
 `;
+
+export const ReactTrendsImage = styled(Image)`
+  && {
+    margin: 32px auto 0 auto;
+    max-width: 1000px;
+  }
+`;
+
+export const GatsbyTrendsImage = styled(Image)`
+  && {
+    margin: 32px auto 0 auto;
+    max-width: 860px;
+  }
+`
