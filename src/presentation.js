@@ -201,6 +201,75 @@ export default class Presentation extends React.Component {
           <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
             Język kompilowany do JavaScriptu o wielkich możliwościach
           </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              TypeScript jest darmowym i otwartym językiem programowania stworzonym w 2012 roku przez firmę Microsoft.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Jest określany jako superset (nadzbiór) dla języka JavaScript, dzięki czemu posiada wszystkie mechanizmy swojego protoplasty, a także rozszerza go o nowe możliwości.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Najważniejszą różnicą w stosunku do JavaScriptu jest wprowadzenie opcjonalnego, statycznego typowania.
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            TypeScript
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Przykładowy kod i różnica w zapisie w stosunku do czystego JavaScriptu
+          </Text>
+          <Appear>
+            <div>
+              <CodePane
+                theme="dark"
+                textSize={24}
+                lang="js"
+                source={require('!raw-loader!./codes/ts.example')}
+                margin="48px auto 0 auto"
+              />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            TypeScript
+          </Heading>
+          <Text margin="20px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Czy to dobry wybór?
+          </Text>
+          <Appear>
+            <Text margin="48px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Każdy kod napisany w czystym JS jest poprawnie walidującym się kodem w TypeScript.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Kod jest bardziej przejrzysty i łatwiejszy do zrozumienia. Dzięki określeniu typów zmiennych, od razu jesteśmy w stanie się zorientować jakiej wartości spodziewa się funkcja.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              TypeScript pozwala wychwycić wiele błędów już w trakcie transpilowania, dzięki czemu cały proces debugowania jest prostszy.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 32px 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Wiele edytorów oferuje wtyczki analizujące kod TS. Oznacza to, że programista jest informowany na bieżąco gdy wprowadza niewłaściwego rodzaju zmienne.
+            </Text>
+          </Appear>
+          <Appear>
+            <ImportantBox>
+              <Text textAlign="left" textSize={28} lineHeight={1.2} textColor="tertiary">
+                Łatwiej jest przejść na TS programistom z innych języków obiektowych, niż programistom, którzy nie mieli wcześniej do czynienia z paradygmatem obiektowym.
+              </Text>
+            </ImportantBox>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
