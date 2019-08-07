@@ -34,6 +34,7 @@ import {
   ImportantBox,
   AndroidImage,
   CodeWithImage,
+  Bridge,
 } from './presentation.styled';
 
 preloader({
@@ -235,9 +236,28 @@ export default class Presentation extends React.Component {
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             React Native
           </Heading>
-          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+          <Text margin="24px 0 64px 0" textAlign="left" textSize={28} textColor="secondary">
             Jak to działa?
           </Text>
+          <Appear>
+            <Bridge>
+              <div>
+                <Text textSize={28} textColor="primary">
+                  Wątek JavaScriptu
+                </Text>
+              </div>
+              <div>
+                <Text textSize={28} textColor="primary">
+                  Bridge
+                </Text>
+              </div>
+              <div>
+                <Text textSize={28} textColor="primary">
+                  Wątki natywne
+                </Text>
+              </div>
+            </Bridge>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
