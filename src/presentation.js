@@ -32,6 +32,8 @@ import Intro from './images/intro-unsplash.jpg';
 import Android from './images/android.png';
 import ReactTrends from './images/react-trends.png';
 import GatsbyTrends from './images/gatsby.png';
+import ReactDevFirst from './images/react1.png';
+import ReactDevSecond from './images/react2.png';
 
 // Styles
 import {
@@ -43,6 +45,9 @@ import {
   Bridge,
   ReactTrendsImage,
   GatsbyTrendsImage,
+  ReactImageContainer,
+  ReactFirstImage,
+  ReactSecondImage,
 } from './presentation.styled';
 
 preloader({
@@ -50,6 +55,8 @@ preloader({
   Android,
   ReactTrends,
   GatsbyTrends,
+  ReactDevFirst,
+  ReactDevSecond,
 });
 
 // Require CSS
@@ -133,6 +140,108 @@ export default class Presentation extends React.Component {
           <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
             Biblioteka do tworzenia interfejsów w JavaScript
           </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              React jest biblioteką pozwalającą projektować aplikacje w oparciu o komponenty.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Komponenty tworzone są w sposób deklaratywny. Opisujemy co ma zostać zrobione, a nie w jaki sposób.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Aby uprościć proces tworzenia komponentów, React wprowadził notację <Mark>JSX</Mark>. Przypomina ona zwykły kod HTML, który możemy "wzbogacać" o kod JavaScript i zwracać w komponentach.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              React efektywnie renderuje komponenty dzięki zastosowaniu mechanizmu Virtual DOM. Jest to "wirtualna" reprezentacja aktualnego drzewa DOM, dzięki której React wie jaki komponent powinien zostać przerenderowany.
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Projektowanie w oparciu o komponenty*
+          </Text>
+          <ReactImageContainer>
+            <ReactFirstImage src={ReactDevFirst} />
+            <ReactSecondImage src={ReactDevSecond} />
+          </ReactImageContainer>
+          <Text margin="64px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://pl.reactjs.org/docs/thinking-in-react.html
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Podejście imperatywne kontra deklaratywne
+          </Text>
+          <Appear>
+            <div>
+              <CodePane
+                theme="dark"
+                textSize={24}
+                lang="jsx"
+                source={require('!raw-loader!./codes/react1.example')}
+                margin="48px auto 0 auto"
+              />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Przykładowy komponent*
+          </Text>
+          <CodePane
+            theme="dark"
+            textSize={24}
+            lang="jsx"
+            source={require('!raw-loader!./codes/react2.example')}
+            margin="32px auto 0 auto"
+          />
+          <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://pl.reactjs.org
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React.js
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Czy to dobry wybór?
+          </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              React ma bardzo łatwy próg wejścia. Tworzenie nowych komponentów jest intuicyjne i dość szybko jesteśmy w stanie stworzyć prostą aplikację.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Ogromna społeczność skupiona wokół Reacta powoduje, że każdego dnia powstają nowe biblioteki i użyteczne komponenty, które można wykorzystać w swoich programach.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 32px 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Wszechstronność Reacta sprawia, że biblioteka ta zaczyna pojawiać się jako element innych, bardziej złożonych technologii, np. React Native czy GatsbyJS.
+            </Text>
+          </Appear>
+          <Appear>
+            <ImportantBox>
+              <Text textAlign="left" textSize={28} lineHeight={1.2} textColor="tertiary">
+                Sam React to często za mało. Do tworzenia dużych aplikacji potrzebujemy większego ekosystemu, rozszerzonego o takie elementy jak np. routing czy zarządzanie stanem. 
+              </Text>
+            </ImportantBox>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">

@@ -93,4 +93,24 @@ export const GatsbyTrendsImage = styled(Image)`
     margin: 32px auto 0 auto;
     max-width: 860px;
   }
-`
+`;
+
+export const ReactImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ReactFirstImage = styled(Image)`
+  && {
+    margin: 32px auto 0 auto;
+    max-width: 500px;
+  }
+`;
+
+export const ReactSecondImage = styled(Image)`
+  && {
+    margin: 32px auto 0 auto;
+    max-width: 560px;
+  }
+`;
