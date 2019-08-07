@@ -169,6 +169,89 @@ export default class Presentation extends React.Component {
           <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
             Nowoczesne podejście do stylowania stron i aplikacji WWW
           </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              <Mark>CSS-in-JS</Mark> nie jest biblioteką, frameworkiem lub kompilatorem CSS. Jest to zbiór pewnych zasad pozwalających tworzyć style CSS z użyciem JavaScriptu.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Niektóre frameworki pozwalają na stosowanie technik CSS-in-JS bez użycia zewnętrznych zależności. Np. React pozwala na zapisanie styli w komponentach w postaci notacji literału obiektowego.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} lineHeight={1.2} textColor="fifth">
+              Stylowanie za pomocą bibliotek JS pozwala rozwiązać pewne problemy z którymi CSS jeszcze sobie nie radzi, np. współdzielenie zmiennych pomiędzy CSS i JS.
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            CSS in JS
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Przykładowy kod z użyciem domyślnego sposobu dołączania styli w React.js
+          </Text>
+          <Appear>
+            <div>
+              <CodePane
+                theme="dark"
+                textSize={24}
+                lang="jsx"
+                source={require('!raw-loader!./codes/styled1.example')}
+                margin="48px auto 0 auto"
+              />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            CSS in JS
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Przykładowy kod z użyciem Styled-components
+          </Text>
+          <Appear>
+            <div>
+              <CodePane
+                theme="dark"
+                textSize={20}
+                lang="jsx"
+                source={require('!raw-loader!./codes/styled2.example')}
+                margin="32px auto 0 auto"
+              />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            CSS in JS
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Czy to dobry wybór?
+          </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Podejście CSS in JS sprawia, że kod jest znacznie "schludniejszy", ponieważ nie musimy rozszerzać HTMLa o nazwy klas, a wszelkie modyfikatory przekazujemy jako właściwości komponentów. 
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Mechanizmy takie jak minifikacja styli, usuwanie nieużywanych reguł czy też izolacja styli w ramach komponentu, są przez niektóre biblioteki wykonywane praktycznie za programistę.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 32px 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Wszystkie zalety preprocesorów np. zagnieżdżanie styli albo tworzenie reużywalnych kawałków kodu, są możliwe przy użyciu technik CSS in JS.
+            </Text>
+          </Appear>
+          <Appear>
+            <ImportantBox>
+              <Text textAlign="left" textSize={28} lineHeight={1.2} textColor="tertiary">
+                Style umieszczane dynamicznie w trakcie parsowania skryptu, nigdy nie będą tak szybko "włączane" do strony jak natywny CSS. Poza tym jest to podejście, które dość mocno dzieli społeczność.
+              </Text>
+            </ImportantBox>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
