@@ -19,6 +19,8 @@ import createTheme from 'spectacle/lib/themes/default';
 // Charts
 import ReactUsage from './components/ReactUsage';
 import ReactNativeUsage from './components/ReactNativeUsage';
+import EmotionUsage from './components/EmotionUsage';
+import StyledUsage from './components/StyledUsage';
 
 // Images
 import Intro from './images/intro-unsplash.jpg';
@@ -27,6 +29,7 @@ import Intro from './images/intro-unsplash.jpg';
 import {
   IntroBox,
   Mark,
+  ImportantBox,
 } from './presentation.styled';
 
 preloader({
@@ -42,6 +45,7 @@ const theme = createTheme(
     secondary: '#fff',
     tertiary: '#ed1b23',
     quaternary: '#fff',
+    fifth: '#ffe6a9',
   },
   {
     primary: 'Montserrat',
@@ -108,11 +112,9 @@ export default class Presentation extends React.Component {
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             React.js
           </Heading>
-          <Appear>
-            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              Biblioteka do tworzenia interfejsów w JavaScript
-            </Text>
-          </Appear>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Biblioteka do tworzenia interfejsów w JavaScript
+          </Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
@@ -130,29 +132,75 @@ export default class Presentation extends React.Component {
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             CSS in JS
           </Heading>
-          <Appear>
-            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              Nowoczesne podejście do stylowania stron i aplikacji WWW
-            </Text>
-          </Appear>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Nowoczesne podejście do stylowania stron i aplikacji WWW
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            CSS in JS
+          </Heading>
+          <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Poziom satysfakcji z używania Styled-components*
+          </Text>
+          <StyledUsage />
+          <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://2019.stateofcss.com
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            CSS in JS
+          </Heading>
+          <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Poziom satysfakcji z używania Emotion*
+          </Text>
+          <EmotionUsage />
+          <Text margin="48px 0 0" textAlign="left" textSize={18} textColor="secondary">
+            *źródło: https://2019.stateofcss.com
+          </Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             TypeScript
           </Heading>
-          <Appear>
-            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              Język kompilowany do JavaScriptu o wielkich możliwościach
-            </Text>
-          </Appear>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Język kompilowany do JavaScriptu o wielkich możliwościach
+          </Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             GatsbyJS
           </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Generator statycznych stron dla miłośników Reacta
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React Native
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Gdy technologie webowe, spotykają mobilne
+          </Text>
           <Appear>
-            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              Generator statycznych stron dla miłośników Reacta
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="fifth">
+              React Native umożliwia tworzenie cross-platformowych aplikacji mobilnych za pomocą Reacta.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="fifth">
+              Mottem przewodnim RN jest <Mark>"Naucz się raz, pisz wszędzie"</Mark>.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="fifth">
+              Systemami docelowymi dla React Native są Android i iOS. Istnieje jednak osobny projekt, rozwijany specjalnie dla systemu Windows.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="fifth">
+              W przeciwieństwie do np. PhoneGapa, wynikowym produktem RN jest pełnoprawna aplikacja natywna, nie webowa.
             </Text>
           </Appear>
         </Slide>
@@ -160,10 +208,46 @@ export default class Presentation extends React.Component {
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             React Native
           </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Przykładowy kod
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React Native
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Jak to działa?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            React Native
+          </Heading>
+          <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            Czy to dobry wybór?
+          </Text>
           <Appear>
-            <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              Gdy technologie webowe, spotykają mobilne
+            <Text margin="64px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              React Native może przyspieszyć proces powstawania oprogramowania, ponieważ znaczna część kodu jest współdzielona pomiędzy różne platformy.
             </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Ma łatwy próg wejścia i programiści zaznajomieni z Reactem, poczują się tutaj jak w domu.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 64px 0" textAlign="left" lineHeight={1.2} textSize={28} textColor="fifth">
+              Aplikacje są szybsze niż aplikacje hybrydowe.
+            </Text>
+          </Appear>
+          <Appear>
+            <ImportantBox>
+              <Text textAlign="left" textSize={28} lineHeight={1.2} textColor="tertiary">
+                Bardziej złożone aplikacje nadal będą jednak wymagały kodu natywnego. Aplikacja będzie szybsza niż w przypadku korzystania z WebView, ale w dalszym ciągu będzie w tyle za "prawdziwymi" aplikacjami natywnymi.
+              </Text>
+            </ImportantBox>
           </Appear>
         </Slide>
         <Slide bgColor="primary">

@@ -16,3 +16,8 @@ export const IntroBox = styled.div`
 export const Mark = styled.span`
   color: ${colors.tertiary};
 `;
+
+export const ImportantBox = styled.div`
+  background-color: ${colors.secondary};
+  padding: 12px;
+`;
