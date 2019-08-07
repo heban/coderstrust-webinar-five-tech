@@ -1,7 +1,10 @@
-/* eslint import/no-webpack-loader-syntax: off */
+/* eslint import/no-webpack-loader-syntax: off, jsx-a11y/accessible-emoji: off */
 
 // Import React
 import React from 'react';
+import Terminal from 'spectacle-terminal';
+import Typist from 'react-typist';
+import Loading from 'react-loading';
 
 // Import Spectacle Core tags
 import {
@@ -65,6 +68,8 @@ const theme = createTheme(
     secondary: 'Helvetica',
   }
 );
+
+const cursor = { show: false, blink: true, element: "|", hideWhenDone: false, hideWhenDoneDelay: 1000 };
 
 export default class Presentation extends React.Component {
   render() {
@@ -231,6 +236,30 @@ export default class Presentation extends React.Component {
               Wynikiem budowania przyszłej strony lub aplikacji w GatsbyJS jest zbiór plików .html, .js oraz .css. Nie ma tutaj żadnego kodu wykonywanego po stronie serwera.
             </Text>
           </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            GatsbyJS
+          </Heading>
+          <Text margin="24px 0 64px 0" textAlign="left" textSize={28} textColor="secondary">
+            Jak tworzymy nową stronę?
+          </Text>
+          <Terminal title="1. pawel@mac: ~(zsh)" output={ [
+            <Typist cursor={ cursor }>npm install -g gatsby-cli</Typist>,
+            <div style={{ color: "#33B969"}}>TOTAL: 174 SUCCESS</div>,
+            <Typist cursor={ cursor }>gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world</Typist>,
+            [
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Loading type="bars" color="#fff" height="30" width="30" />
+                <span style={{ marginLeft: "1rem" }}>Installing packages...</span>
+              </div>,
+              <div style={{ color: "#33B969"}}>⚡️ Success!</div>
+            ],
+            <Typist cursor={ cursor }>cd hello-world</Typist>,
+            <Typist cursor={ cursor }>gatsby develop</Typist>,
+            <div style={{ color: "#33B969"}}>⚡️ Open localhost:8000</div>
+            ]}
+          />
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
