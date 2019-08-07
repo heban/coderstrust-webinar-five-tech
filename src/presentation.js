@@ -10,6 +10,7 @@ import {
   Slide,
   Appear,
   Text,
+  CodePane,
 } from 'spectacle';
 import preloader from "spectacle/lib/utils/preloader";
 
@@ -24,16 +25,20 @@ import StyledUsage from './components/StyledUsage';
 
 // Images
 import Intro from './images/intro-unsplash.jpg';
+import Android from './images/android.png';
 
 // Styles
 import {
   IntroBox,
   Mark,
   ImportantBox,
+  AndroidImage,
+  CodeWithImage,
 } from './presentation.styled';
 
 preloader({
   Intro,
+  Android,
 });
 
 // Require CSS
@@ -211,6 +216,20 @@ export default class Presentation extends React.Component {
           <Text margin="24px 0 0" textAlign="left" textSize={28} textColor="secondary">
             Przykładowy kod
           </Text>
+          <Appear>
+            <CodeWithImage>
+              <div style={{ maxWidth: '600px', width: '600px' }}>
+                <CodePane
+                  theme="dark"
+                  textSize={16}
+                  lang="jsx"
+                  source={require('!raw-loader!./codes/rn.example')}
+                  margin="32px auto 0 auto"
+                />
+              </div>
+              <AndroidImage src={Android} />
+            </CodeWithImage>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">

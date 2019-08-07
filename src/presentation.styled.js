@@ -1,4 +1,5 @@
-import styled from '@emotion/styled/macro'
+import styled from '@emotion/styled/macro';
+import { Image } from 'spectacle';
 
 const colors = {
   primary: '#214172',
@@ -20,4 +21,19 @@ export const Mark = styled.span`
 export const ImportantBox = styled.div`
   background-color: ${colors.secondary};
   padding: 12px;
+`;
+
+export const AndroidImage = styled(Image)`
+  && {
+    margin: 0;
+    max-width: 286px;
+    max-height: 455px;
+    margin-left: 64px;
+    margin-top: 32px;
+  }
+`;
+
+export const CodeWithImage = styled.div`
+  display: flex;
+  justify-content: flex-start;
 `;
